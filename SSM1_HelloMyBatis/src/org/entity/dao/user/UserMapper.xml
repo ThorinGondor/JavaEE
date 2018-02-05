@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.entity.dao.user.UserMapper">
+    <select id="count" resultType="int">
+    select count(1) as count from smbms_user
+    </select>
+    <select id="userName" resultType="String">
+    select userName from smbms_user where ID = 1002
+    </select>
+    <select id="roleName" resultType="String">
+    select roleName from smbms_role where ID = 102
+    </select>
+    <select id="userList" resultType="org.entity.dao.user.User">
+    select * from smbms_user;
+    </select>
+    <select id="providerList" resultType="org.entity.dao.user.Provider">
+    select * from smbms_provider;
+    </select>
+</mapper>
